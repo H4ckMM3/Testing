@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СпортМастер</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">СпортМастер</div>
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div style="flex: 0 0 200px;"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="slider">
+            <div class="slider-container">
+                <div class="slide">Новая коллекция спортивной одежды</div>
+                <div class="slide">Скидки на все кроссовки</div>
+                <div class="slide">Аксессуары для фитнеса</div>
+                <div class="slide">Спортивное питание</div>
+                <div class="slide">Товары для йоги</div>
+            </div>
+            <button class="slider-btn slider-prev">←</button>
+            <button class="slider-btn slider-next">→</button>
+            <div class="slider-nav"></div>
+        </div>
+
+        <div class="filters">
+            <label>Сортировка: </label>
+            <select id="sort">
+                <option value="price-asc">По цене (возрастание)</option>
+                <option value="price-desc">По цене (убывание)</option>
+                <option value="name">По названию</option>
+            </select>
+        </div>
+
+        <div class="products">
+            <div class="product">
+                <img src="img/cross.png" alt="Товар 1">
+                <div class="product-info">
+                    <h3>Кроссовки спортивные</h3>
+                    <p>4999 ₽</p>
+                    <button class="buy-btn">Купить</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/mai.png" alt="Товар 2">
+                <div class="product-info">
+                    <h3>Футболка беговая</h3>
+                    <p>1999 ₽</p>
+                    <button class="buy-btn">Купить</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/short.png" alt="Товар 3">
+                <div class="product-info">
+                    <h3>Шорты тренировочные</h3>
+                    <p>2499 ₽</p>
+                    <button class="buy-btn">Купить</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/cross.png" alt="Товар 3">
+                <div class="product-info">
+                    <h3>Кроссовки спортивные</h3>
+                    <p>2499 ₽</p>
+                    <button class="buy-btn">Купить</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/mai.png" alt="Товар 3">
+                <div class="product-info">
+                    <h3>Футболка беговая</h3>
+                    <p>2499 ₽</p>
+                    <button class="buy-btn">Купить</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <button id="openModal">Обратная связь</button>
+            <p>&copy; 2025 СпортМастер. Все права защищены.</p>
+            </nav>
+        </div>
+    </footer>
+
+    <div class="modal" id="feedbackModal">
+        <div class="modal-content">
+            <h2>Обратная связь</h2>
+            <form id="feedbackForm">
+                <input type="text" placeholder="Имя *" required>
+                <input type="email" placeholder="Email *" required>
+                <input type="tel" placeholder="Телефон">
+                <textarea placeholder="Сообщение *" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
