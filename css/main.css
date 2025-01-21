@@ -1,3 +1,49 @@
+
+:root {
+    --container-padding: 15px;
+}
+
+/* Custom container styles */
+.custom-container {
+    max-width: 1000px; /* Default container width */
+    padding: var(--container-padding);
+    margin: 0 auto;
+}
+
+/* Define CSS Variables */
+:root {
+    --container-width: 1000px;
+    --container-padding: 15px;
+}
+
+/* Base container styles */
+.container {
+    max-width: var(--container-width);
+    padding: var(--container-padding);
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    :root {
+        --container-width: 900px;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --container-width: 750px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --container-width: 100%;
+        --container-padding: 10px;
+    }
+}
+
+/* Existing styles */
 * {
     margin: 0;
     padding: 0;
@@ -87,15 +133,17 @@ header {
 }
 
 nav {
-    flex: 1;
-    text-align: center;
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание элементов */
+    justify-content: space-between; /* Равномерное распределение */
+    height: 60px; /* Высота навигационной панели */
 }
-
 nav ul {
     list-style: none;
     display: flex;
-    gap: 40px;
-    justify-content: center;
+    gap: 20px; /* Расстояние между пунктами меню */
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
@@ -309,7 +357,24 @@ nav a:hover::after {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(20, 136, 204, 0.3);
 }
+/* Адаптивность */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr); /* Два товара в ряд на экранах до 768px */
+    }
+    .product img {
+        height: 150px;
+    }
+}
 
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: repeat(1, 1fr); /* Один товар в ряд на экранах до 480px */
+    }
+    .product img {
+        height: 150px;
+    }
+}
 /* Pagination */
 .pagination {
     display: flex;
